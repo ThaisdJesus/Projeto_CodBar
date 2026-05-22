@@ -5,7 +5,7 @@
 - Listagem de pedidos
 - Atualização de status
 - Remoção de pedidos
-- Área administrativa
+- Pág ADM
 - Identificação de mesas
 ## Tecnologias utilizadas 
 - HTML5
