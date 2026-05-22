@@ -1,0 +1,153 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+  * { 
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+ body{
+    min-height: 100vh;
+
+    width: 100%;
+    height:100%;
+    background: linear-gradient(to right, #ffcc00, #ff9900);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+h1{
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-align: center;
+    position:relative;
+    color: #ffffff;
+
+
+}
+
+h1::after{ /* efeito de sublinhado no h1 */
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 4px;
+    background-color: #ffffff;
+    left: 50%;
+    bottom: -15px;
+    border-radius: 10px;
+    transform: translateX(-50%); 
+    
+}
+
+.container{
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px); 
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+container-h2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mesas{
+    display: grid; 
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 15px; 
+    margin-bottom: 20px;
+
+}
+
+.mesa7{
+    display: flex; 
+    justify-content: center;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+
+.mesa{
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    color: #ffffff;
+}
+
+.mesa:hover{
+    transform: translateY(-5px); 
+    background-color: rgba(255,255,255,0.2);
+    border-color: #ff9900;
+    color: #ff9900;
+}
+
+.mesa input{
+    margin-bottom: 10px;
+}
+
+.pedido-area{
+    display: flex;
+    align-items: center;
+    gap:20px;
+    margin-top:20px;
+    margin-bottom: 30px;
+}
+
+textarea{
+    width: 100%;
+    height: 120px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+    background-color: rgba(255,255,255,0.1);
+    color: #ffffff;
+    font-size: 1rem;
+    resize: none;
+}
+
+button{
+    display: block;
+    margin: auto;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 10px;
+    background: black;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover{
+    transform: scale(1.05);
+}
+
+
+
+@media (max-width: 768px){
+
+    .mesas{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pedido-area{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    h1{
+        font-size: 2rem;
+    }
+
+
+}

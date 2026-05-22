@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css">
+     <link rel="shortcut icon" rel="icon" href="/images/logo.favicon.ico.png" type="image/x-icon">
+    <title>administrador</title>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo, Administrador!</h1>
+        <p>Gerencie os pedidos e acompanhe o status dos mesas</p>
+    </header>
+
+     <section class="dashboard">
+
+        <div class="info-card">
+            <h2 id="totalPedidos">0</h2>
+            <p>Total de Pedidos</p>
+        </div>
+
+        <div class="info-card">
+            <h2 id="emPreparo">0</h2>
+            <p>Em preparo</p>
+        </div>
+
+        <div class="info-card">
+            <h2 id="finalizados">0</h2>
+            <p>Finalizados</p>
+        </div>
+
+    </section>
+
+
+  
+    <section>
+
+        <h2 class="titulo-pedidos">
+            Pedidos
+        </h2>
+
+        <div id="listaPedidos"></div>
+
+    </section>
+
+    <script src="../js/admin.js"></script>
+
+
+    
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+  * { 
+      
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+:root {
+  --color-neutral-0: #ffffff;
+  --color-neutral-1: #d86700;
+  --color-neutral-2: #e87f18;
+  --color-neutral-3: #f9a15c;
+  --color-neutral-4: #f9b88c;
+  --color-neutral-5: #f9c1a7;
+  --color-neutral-6: #f9d1c2;
+  --color-neutral-7: #f9e1dd;
+}
+
+body{
+    width: 100%;
+    height:100%;
+    background: linear-gradient(to right, #ffcc00, #ff9900);
+}
+
+.login{
+    width: 300px;
+    margin: 200px auto;
+    text-align: center;
+    border: #d86700 4px solid;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.815) 0px 0px 10px;
+    background-color: var(--color-neutral-2);
+    background-attachment: fixed; /* Garante que a imagem de fundo fique fixa durante a rolagem */
+    color:#ffffff;
+
+}
+
+
+input{
+    display: block; 
+    margin: 2px auto;
+    width: 250px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+
+}
+
+:placeholder-shown {
+    color: #d86700;
+    font-weight: 300;
+}
+
+button{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--color-neutral-3);
+    color: var(--color-neutral-0);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--color-neutral-4);
+    color: var(--color-neutral-0);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.fa-eye{
+   display: inline-block;
+
+    margin-right: -2px;
+
+    cursor: pointer;
+
+    color: gray;
+
+
+}

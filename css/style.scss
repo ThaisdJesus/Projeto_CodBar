@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+
+/* Variáveis de cores para facilitar a manutenção e consistência do design */
+:root {
+  --color-neutral-0: #ffffff;
+  --color-neutral-1: #d86700;
+  --color-neutral-2: #e87f18;
+  --color-neutral-3: #f9a15c;
+  --color-neutral-4: #f9b88c;
+  --color-neutral-5: #f9c1a7;
+  --color-neutral-6: #f9d1c2;
+  --color-neutral-7: #f9e1dd;
+}
+button{
+  position: fixed; /* Mantém o botão fixo na tela, mesmo ao rolar a página */
+  top: 20px; /* Distância do topo da tela */
+  right: 20px; /* Distância da direita da tela */
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos da página */  
+
+  
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 8px;
+  cursor: pointer; /* Adiciona um cursor de ponteiro para indicar que o botão é clicável */
+  font-size: 1rem; 
+  font-weight: 600; 
+  background-color: transparent; /* Define o fundo do botão como transparente para que apenas o ícone seja visível */
+
+  
+}
+
+.btn{
+  position: fixed;
+  top: 45px; 
+  right: 20px; 
+  background-color: var(--color-neutral-1); /* Define a cor de fundo do botão para laranja */
+  color: var(--color-neutral-0); /* Define a cor do texto do botão para branco */
+  border: none; /* Remove a borda do botão */
+  border-radius: 8px; /* Adiciona bordas arredondadas ao botão */
+  padding: 10px 20px; /* Adiciona espaçamento interno ao botão */
+  cursor: pointer; /* Adiciona um cursor de ponteiro para indicar que o botão é clicável */
+  font-size: 1rem; /* Define o tamanho da fonte do texto do botão */
+  font-weight: 600; /* Define a espessura da fonte do texto do botão para um peso médio, para melhor legibilidade */
+}
+
+header {
+background-color: var(--color-neutral-1);
+  padding: 2px 6px;
+  position: sticky; 
+  top: 0;
+  z-index: 1; 
+
+  .navbar {
+    /*css nested, para estilizar o menu de navegação dentro do header*/
+    display: flex; /* Flexbox para organizar os itens do menu de navegação em linha */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: space-between; /* Distribui os itens com espaço entre eles */
+    padding: 0 20px; /* Espaçamento horizontal dentro do menu de navegação */
+
+    /* teste de barra de rolagem para o site
+body{
+    min-height: 140vh;
+}*/
+    .logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 80px;
+    } 
+
+    ul{
+       display:none; /* Esconde os links de navegação por padrão, para serem exibidos apenas no menu móvel */
+       list-style: none; /* Remove os marcadores de lista dos links de navegação */
+       flex-direction: column; /* Organiza os links de navegação em coluna para o menu móvel */;
+       gap: 0.5rem; /* Adiciona um pequeno espaço entre os links de navegação no menu móvel */
+       width: 100%; /* Faz com que os links de navegação ocupem toda a largura disponível no menu móvel */  
+       position: absolute; /* Posiciona os links de navegação de forma absoluta para que possam ser sobrepostos ao conteúdo da página no menu móvel */
+       top: 88px;
+       background-color: var(--color-neutral-1); /* Define a cor de fundo dos links de navegação no menu móvel para combinar com o cabeçalho */
+       left: 0;
+       padding: 1rem;
+
+
+       &.show{ 
+            display:flex; /* Exibe os links de navegação quando a classe "show" é adicionada, para o menu móvel */
+        } 
+
+        li{
+            text-align: center; 
+            a{
+                text-decoration: none; /* Remove o sublinhado dos links de navegação */
+                color: var(--color-neutral-0); /* Define a cor dos links de navegação para branco */
+                font-size: 1.2rem; /* Aumenta o tamanho da fonte dos links de navegação para melhor legibilidade no menu móvel */
+                font-weight: 500; /* Define a espessura da fonte dos links de navegação para um peso médio, para melhor legibilidade no menu móvel */
+
+                &:hover{
+                    color: var(--color-neutral-3); /* Altera a cor dos links de navegação para um tom mais claro de laranja ao passar o mouse, para indicar interatividade no menu móvel */
+                    border-bottom: 1px solid var(--color-neutral-3); /* Adiciona uma borda inferior aos links de navegação ao passar o mouse, para indicar interatividade no menu móvel */
+                    
+                }
+            }
+
+        }
+    }
+  }
+}

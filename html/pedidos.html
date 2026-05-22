@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/pedidos.css">
+    <title>Faça seu pedido</title>
+</head>
+<body>
+    <h1> Faça seu pedido</h1>
+    <div class="container">
+    <form action=""  method="post">
+        <h2>Selecione a mesa:</h2>
+        <div class="mesas">
+        <label class="mesa" for="mesa">
+        <input type="radio"  id="mesa" name="mesa" required><br><br>
+        <span class="mesa1">Mesa 01</span><br><br>
+        </label> 
+       
+        
+        <label class="mesa"> 
+        <input type="radio"  id="mesa" name="mesa" required><br><br>
+            <span class="mesa2">Mesa 02</span><br><br>
+        </label>
+        
+        <label class="mesa">
+        <input type="radio"  id="mesa" name="mesa" required><br><br>
+            <span class="mesa3">Mesa 03</span><br><br>
+        </label>
+        
+        <label class="mesa" >
+        <input type="radio"  id="mesa" name="mesa" required><br><br>
+            <span class="mesa4">Mesa 04</span><br><br>
+        </label>
+        
+        <label class="mesa">
+        <input type="radio"  id="mesa" name="mesa" required> <br><br>
+            <span class="mesa5">Mesa 05</span><br><br>
+        </label>
+        
+        <label class="mesa">
+        <input type="radio"  id="mesa" name="mesa" required><br><br>
+            <span class="mesa6">Mesa 06</span><br><br>
+        </label>
+        </div>
+
+        <div class="mesa7">
+        <label class="mesa">
+        <input type="radio"  id="mesa" name="mesa" required><br><br>
+            <span class="mesa7">Mesa 07</span><br><br>
+        </label>
+        </div>
+
+        <div class="pedido-area">
+
+        <label for="pedido">Pedido:</label>
+        <textarea id="pedido" placeholder="Digite seu pedido..." name="pedido" rows="4" cols="50" required></textarea><br><br>
+        </div>
+            
+         <button>Enviar Pedido</button>
+    </form>
+    </div>
+
+    <script src="../js/pedidos.js"></script>
+</body>
+
+
+</html>

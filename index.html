@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Link para o Font Awesome, biblioteca de ícones -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      id="icon"
+      rel="icon"
+      type="image/x-icon"
+      href="images/logo.favicon.ico.png"
+      />
+    <title>CodeBar</title>
+  </head>
+  <body>
+    <header>
+      <!-- Cabeçalho da página, contém o logo e o menu de navegação (links)-->
+      <nav class="navbar">
+        <!-- Menu de navegação, tag nav para definir um conjunto de links  organizados por lista   -->
+        <img src="images/logo.jpg" alt="Logo do CodeBar" class="logo" />
+        <button class="menubtn">
+          <!-- Botão para o menu hambúrguer, visível em telas menores -->
+          <i class="fa-solid fa-bars"></i>
+          <!-- Ícone de menu hambúrguer, usando a biblioteca Font Awesome -->
+        </button>
+        <ul id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          
+         
+           <li>  <a href="#localizacao" class="icon"
+              >Localização <i class="fa-solid fa-location-dot"></i
+            ></a>
+          </li>
+
+          <li>
+            <a href="#contato" class="icon"
+              >Contato <i class="fa-solid fa-phone"></i
+            ></a>
+          </li> 
+         <li><a href="/html/login.html" target="_blank">Pedidos <i class="fa-solid fa-cart-shopping"></i></a>
+           </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="home" class="home">
+      <div class="home-content">
+        <h1>Bem-vindo ao CodeBar</h1>
+        <p>O melhor bar para programadores e entusiastas de tecnologia!</p>
+        <!-- <a href="#cardapio" class="btn">Veja nosso cardápio</a> -->
+      </div>
+    </section>
+    <section id="sobre" class="sobre">
+      <div class="sobre-titulo"><h2>Sobre Nós</h2></div>  
+      <div class="sobre-content">
+        <div class="sobre-texto">
+        
+        <p>
+          O CodeBar é um bar temático criado para reunir programadores,
+          desenvolvedores e entusiastas de tecnologia em um ambiente
+          descontraído e inspirador. Nosso objetivo é proporcionar uma
+          experiência única, onde a paixão pela tecnologia se encontra com a
+          diversão e a socialização.
+        </p>
+        <p>
+          Oferecemos uma variedade de bebidas e petiscos, além de eventos
+          temáticos, como noites de programação, hackathons e palestras sobre as
+          últimas tendências em tecnologia. Venha fazer parte da nossa
+          comunidade e compartilhar seu amor pela tecnologia conosco!
+        </p>
+    </div>
+    
+    <div class="img_sobre">
+        <img
+          src="images/Ambiente.png"
+          alt="imagem do ambiente do CodeBar"
+          class="img_sobre"
+        />
+      </div>
+
+      </div>
+    </section>
+    <section id="cardapio" class="cardapio">
+      <div class="cardapio-content">
+        <h2>Cardápio</h2>
+      </div>
+      <div class="cardapio-carrossel">
+        <div class="slide">
+          <img
+            src="images/hamburguer.jpg"
+            alt="Hamburguer"
+            class="slide-image"
+          />
+        </div>
+
+        <div class="slide">
+          <img
+            src="images/porcao_batata.png"
+            alt="Imagem de uma porção de batatas fritas"
+            class="slide-image"
+          />
+          
+        </div>
+
+        <div class="slide">
+          <img
+            src="images/PORCAO_FRANGOAP.jpg"
+            alt="Imagem frango a passarinho"
+            class="slide-image"
+          />
+         
+        </div>
+
+        <div class="slide">
+          <img
+            src="images/BEBIDAS.png"
+            alt=" imagem de bebidas"
+            class="slide-image"
+          />
+          
+        </div>
+
+
+        <button class="prev1" onclick="plusSlides(-1)"><i class="fa-solid fa-chevron-left"></i></button>
+        <!-- Botão para navegar para o slide anterior, usando um ícone de seta esquerda da biblioteca Font Awesome -->
+        <button class="next" onclick="plusSlides(1)"><i class="fa-solid fa-chevron-right"></i></button>
+      </div>
+
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span> /* javascript para controlar os pontos de navegação do carrossel, permitindo que o usuário clique em um ponto específico para ir diretamente para um slide */
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        
+      </div>
+      <button class="cardapio-btn" onclick="window.open('/Cardapio_doc/Cardápio_CodeBar.pdf', '_blank')" >CARDÁPIO COMPLETO</button>
+
+    </section>
+
+    <section id="localizacao" class="localizacao">
+      <div class="localizacao-content">
+        <h2>Localização<br></h2>
+        <p>Encontre o CodeBar em nosso endereço:<br></p>
+        <address>
+          Rua Coronel Silva Gomes
+          Bairro Canindé<br />
+          São Paulo - SP<br />
+          CEP: 03029-020
+        </address> 
+      </div>
+
+      <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!4v1776982065915!6m8!1m7!1slaLuXHcYBTi1DwMlWFZASw!2m2!1d-23.53070794867765!2d-46.61784331104611!3f320.6488866260428!4f0.9862348623086206!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      
+    </section>
+
+
+    <footer id="contato" class="contato">
+      <div class="contato-content">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco no caso de dúvidas:</p>
+        
+          <a href="mailto:contato@codebar.com" target="_blank">
+            <i class="fa-solid fa-envelope"></i> Email: contato@codebar.com <br>
+          </a>
+          <a href="tel:1112345678">
+            <i class="fa-solid fa-phone"></i> Telefone: (11) 1234-5678
+          </a>
+
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

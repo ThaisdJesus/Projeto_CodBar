@@ -1,0 +1,498 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+@media (min-width: 760px) {
+  * { 
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+     img { 
+      
+      max-width: 100%;
+      height: auto;
+
+    }
+:root {
+  --color-neutral-0: #ffffff;
+  --color-neutral-1: #d86700;
+  --color-neutral-2: #e87f18;
+  --color-neutral-3: #f9a15c;
+  --color-neutral-4: #f9b88c;
+  --color-neutral-5: #f9c1a7;
+  --color-neutral-6: #f9d1c2;
+  --color-neutral-7: #f9e1dd;
+}
+
+
+.menubtn {
+  position: fixed; /* Mantém o botão fixo na tela, mesmo ao rolar a página */
+  top: 20px; /* Distância do topo da tela */
+  right: 20px; /* Distância da direita da tela */
+  z-index: 1000; /* Garante que o botão fique acima de outros elementos da página */
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer; /* Adiciona um cursor de ponteiro para indicar que o botão é clicável */
+  font-size: 2rem;
+  font-weight: 600; /*
+  color: --var(--color-neutral-0); /* Cor do texto do botão */
+  background-color: transparent; /* Define o fundo do botão como transparente para que apenas o ícone seja visível */
+}
+/* Estilos para o ícone de menu hambúrguer e o ícone de fechar (X) */
+.fa-bars {
+  color: white;
+}
+
+.fa-times {
+  color: white;
+}
+
+header {
+  width: 100%;
+  height: 110px;
+  background: linear-gradient(to right, #ffcc00, #ff9900);
+  position: fixed;
+  padding: 3px 7px;
+  z-index: 1; 
+  
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 100%;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto; /* Centraliza o conteúdo do cabeçalho horizontalmente */
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  
+  margin-left: center;
+  border-radius: 95px;
+  object-fit: cover; /* Garante que a imagem preencha o espaço definido sem distorção */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  position: absolute;
+  top: 88px;
+  background-color: linear-gradient(to right, #ffcc00, #ff9900);
+  left: 0;
+  padding: 1rem;
+  object-fit: cover;
+}
+
+#nav-links {
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  gap: 5rem;
+  width: 100%;
+  position: static;
+  top: 88px;
+  background-color: var(--color-neutral-1);
+  left: 0;
+  padding: 1rem;
+}
+
+/* MOSTRAR MENU */
+
+#nav-links.show {
+  display: flex;
+}
+
+/* ITENS */
+
+#nav-links li {
+  text-align: center;
+}
+
+/* LINKS */
+
+#nav-links li a {
+  text-decoration: none;
+  color: var(--color-neutral-0);
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* HOVER */
+
+#nav-links li a:hover {
+  color: var(--color-neutral-6);
+  border-bottom: 1px solid var(--color-neutral-3); /* Adiciona uma borda inferior para destacar o link ao passar o mouse */
+  /*transition: all 5s ease;*/
+}
+
+
+  .menubtn {
+    display: none; /* Esconde o botão de menu em telas maiores */
+  }
+
+  #nav-links {
+    display: flex; /* Exibe os links de navegação em telas maiores */
+    position: static; /* Remove o posicionamento absoluto para que os links fiquem alinhados com o restante do conteúdo */
+    flex-direction: row; /* Alinha os links horizontalmente */
+    gap: 5rem; /* Adiciona um espaço entre os links */
+    background-color: transparent; /* Remove o fundo para que os links se integrem ao cabeçalho */
+    padding: 0px; /* Remove o preenchimento para que os links fiquem alinhados com o restante do conteúdo */
+    align-items: center;
+    width: 100%; 
+    border-bottom: var(--color-neutral-0);
+  }
+  /* Estilos para a seção "Home" */ /*arrumar a responsividade*/
+  .home {
+    height: 100vh; /* Define a altura da seção "Home" para ocupar 80% da altura da janela de visualização, garantindo que o conteúdo seja centralizado verticalmente e que a seção tenha uma presença visual significativa na página */
+    background: linear-gradient(to right, #ffcc00, #ff9900);
+    background-image: url(../images/Fachada.png);
+    align-items: center;
+    display: flex; /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    color: var(--color-neutral-0);
+    text-shadow: 2px 2px 4px #000000; 
+    font-size: 2rem;
+    padding: 20px;
+  }
+
+  .home-content {
+   max-width: 90%;
+  }
+
+  .home h1 {
+    font-size: 4rem;
+    margin-top: 500px;
+    text-shadow: 2px 2px 4px #000000;
+  }
+
+  .home p {
+    text-decoration-line: none;
+    text-shadow: 2px 2px 4px #b9b8b3;
+    background-color: rgba(151, 78, 4, 0.712);
+    border-radius: 16px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+  }
+
+
+  
+ .sobre {
+  padding: 80px 20px;
+  background: linear-gradient(to right, #ffcc00, #ff9900);
+  color: var(--color-neutral-0);
+  scroll-margin-top: 110px;
+}
+
+
+
+.sobre-titulo {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  text-shadow: 2px 2px 4px #000;
+}
+
+
+
+.sobre-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  flex-direction: row-reverse;
+}
+
+
+
+.sobre-texto {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 1.6; 
+}
+
+
+
+.img_sobre {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.img_sobre img {
+  width: 100%; 
+  max-width: 500px; 
+  border-radius: 20px;
+}
+}
+  
+  .cardapio {
+    background: linear-gradient(to right, #ffcc00, #ff9900);
+    color: var(--color-neutral-0);
+    padding: 50px;
+  }
+
+  .cardapio h2 {
+    margin-top: 70px;
+    border: 5% #f9e1dd;
+    align-items: center;
+    display: flex;
+    margin-left: 39%;
+    word-wrap: break-word; /* Permite que o texto quebre em várias linhas, se necessário */
+    font-size: 4rem;
+
+    text-shadow: 2px 2px 4px #000000;
+  }
+
+
+
+  .cardapio-carrossel {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .slide {
+    width: 100%;
+    display: none; /* Esconde os slides por padrão */
+    justify-content: center;
+    align-items: center;
+  }
+
+  .prev1,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  width: 45px; /* IMPORTANTE */
+  height: 45px; /* IMPORTANTE */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  z-index: 10;
+}
+
+.prev1 {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+  .prev1:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Aumenta a opacidade do fundo ao passar o mouse para destacar os botões */
+  }
+
+ 
+
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+.slide { 
+  animation-name: fade; /* Aplica a animação de fade aos slides para criar um efeito de transição suave entre eles */
+  animation-duration: 1.5s;
+}
+
+@keyframes fade { /* Define a animação de fade para os slides, onde a opacidade varia de 0.4 para 1, criando um efeito de transição suave entre os slides do carrossel */
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+.slide-image {
+  width: 100%;
+  height: 400px; /* controla altura */
+  top: 50%;
+  bottom: 50%;
+  object-fit: cover; /* mantém proporção bonita */
+  border-radius: 15px;
+  visibility: 100%;
+}
+
+
+.cardapio-btn {
+  margin-left: 40%;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: rgba(151, 77, 4, 0.473);
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.3rem;
+  text-shadow: 2px 2px 4px #ff9900;
+}
+
+.cardapio-btn:hover {
+  background-color: rgba(151, 78, 4, 0.912); 
+}
+
+  
+
+.localizacao {
+  display: flex; /* Utiliza flexbox para organizar o conteúdo em linha */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: center; 
+  gap: 60px; /* Adiciona um espaço entre a imagem e o conteúdo*/
+  padding: 60px;
+  background: linear-gradient(to right, #bb9408, #d18305);
+  color: var(--color-neutral-0);
+  scroll-margin-top: 135px
+  
+  ;
+}
+ 
+.localizacao-content {
+  max-width: 400px; /* Limita a largura do conteúdo textual para evitar que fique muito largo em telas maiores */
+  text-align: left;
+  border-right: 3px solid white; 
+  padding-right: 40px;
+
+  
+
+
+}
+
+
+.mapa iframe{ /* Estilos para o mapa incorporado (iframe) */
+ width: 700px;
+ height: 400px; 
+ border: 0;
+ border-radius: 12px;
+ box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+ overflow: hidden;
+ 
+}
+
+
+
+/*titulo*/
+.localizacao h2 {
+  font-size: 3rem;
+  /*margin-bottom: 180px;*/
+ 
+  text-shadow: 2px 2px 4px black;
+}
+
+.localizacao-content p { /*texto*/
+  font-size: 1.2rem;
+  background:none;
+  
+}
+.localizacao-content address {  /*endereço*/
+  font-size: 1rem;
+  background:none;
+  
+  
+  
+  
+  
+}
+
+.mapa {
+
+padding-left: 40px;
+}
+
+
+
+.mapa iframe:hover {
+  transform: scale(1.05); /* Aumenta o tamanho do mapa ao passar o mouse para destacar a interatividade */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de zoom */
+
+
+
+}
+
+
+.contato {
+  background: linear-gradient(to right, #ffcc00, #ff9900);
+  color: var(--color-neutral-0);
+  padding: 50px;
+  kerning: auto;
+  align-items: center;
+  display: flex;
+  
+  
+
+}
+
+.contato h2 {
+ font-size: 3rem;
+ text-shadow: 2px 2px 4px #000000;
+ margin-left: 100px;
+ 
+}
+
+.contato-content p {
+  font-size: 1.2rem;
+  background:none;
+  margin-left: 100px;
+  
+  
+}
+
+.contato-content i{
+  margin-left: 100px;
+  color: #ff9900;
+  ;
+}
+
+.contato-content a {
+  text-decoration: none;
+  color: var(--color-neutral-0);
+  font-size: 1rem;
+  font-weight: 500; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
